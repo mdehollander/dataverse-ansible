@@ -25,7 +25,7 @@ echo "punching firewall holes for common dataverse ports"
 /usr/bin/firewall-cmd --reload
 
 echo "cloning dataverse-ansible repository"
-/usr/bin/git clone https://github.com/IQSS/dataverse-ansible.git /home/vagrant/dataverse-ansible
+/usr/bin/git clone https://github.com/mdehollander/dataverse-ansible.git /home/vagrant/dataverse-ansible
 
 echo "running dataverse-ansible playbooks"
 /usr/bin/ansible-playbook -i /home/vagrant/dataverse-ansible/inventories/vagrant.yaml -s -e @/home/vagrant/dataverse-ansible/group_vars/vagrant.vars -vv /home/vagrant/dataverse-ansible/dataverse.pb
